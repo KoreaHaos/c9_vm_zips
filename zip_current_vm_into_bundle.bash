@@ -72,6 +72,8 @@ function init() {
     zip_up_temp_into_bundle;
     move_temp_bundle_to_zipped_machine_folder;
     #add_vm_to_bundle;
+    
+    rm -rf "$_TEMP_DIR_PATH"
 }
 
 init
