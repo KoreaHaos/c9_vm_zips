@@ -66,7 +66,7 @@ function init() {
     if [ -e "$_ZIPED_MACHINES_BUNDLE_PATH" ]
     then
         unzip_bundle_into_temp;
-        rename "$_ZIPED_MACHINES_BUNDLE_PATH" "$_ZIPED_MACHINES_BUNDLE_PATH-archived"
+        mv "$_ZIPED_MACHINES_BUNDLE_PATH" "$_ZIPED_MACHINES_BUNDLE_PATH-archived"
     fi
     
     zip_up_temp_into_bundle;
