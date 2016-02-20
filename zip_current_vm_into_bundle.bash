@@ -13,7 +13,7 @@ function zip_up_the_vm() {
     printf "CREATE : '%s'" "$_PATH_AND_FILE_TO_WRITE";
     read -p " ? " _user_response;
     
-    zip -r "$_PATH_AND_FILE_TO_WRITE" . -x *.c9* *test_to_exclude*
+    zip -r "$_PATH_AND_FILE_TO_WRITE" . -x "*.c9*" "*c9_vm_zips*"
 }
 
 function init() {
@@ -29,8 +29,9 @@ function init() {
     
     local _ZIPED_MACHINES_BUNDLE_FILE_NAME="zipped_machines_bundle";
     
+    mkdir "$_TEMP_DIR_PATH"
     zip_up_the_vm;
-    add_vm_to_bundle;
+    #add_vm_to_bundle;
 }
 
 init
